@@ -16,8 +16,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask EnemyLayers;
     public float AttackRange = 1.5f;
     public int AttackDamage = 10;
+  
 
-   
+    
 
     Animator animator;
     ControlManager controlManager;
@@ -84,6 +85,8 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("ataque"+Enemy.name);
                 Enemy.GetComponent<Enemy>().TakeDamage(AttackDamage);
+               
+
             }
            
             CurrentComboPriorty = 0; //Reset the Combo Priorty
@@ -98,6 +101,7 @@ public class PlayerController : MonoBehaviour
         }
         Gizmos.DrawWireSphere(AttackPoint.position, AttackRange);
     }
+   
 
     void ResetTriggers() //Reset All the Animation Triggers so we don't have overlapping animations
     {
@@ -127,8 +131,10 @@ public class PlayerController : MonoBehaviour
         //Capturo los componentes Rigidbody2D y Sprite Renderer del Jugador
         rb2d = GetComponent<Rigidbody2D>();
         spRd = GetComponent<SpriteRenderer>();
+       
 
     }
+  
 
     void FixedUpdate()
     {

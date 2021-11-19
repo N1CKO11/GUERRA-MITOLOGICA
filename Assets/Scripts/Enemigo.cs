@@ -3,26 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class Enemigo : MonoBehaviour
 {
-   
-    public int MaxHealth = 300;
-     public int CurrentHealth;
-    
-    public Slider BarraVida;
+
+    public int vida = 300;
+    public int vidaactual;
+
     void Start()
     {
-        CurrentHealth = MaxHealth;
+        vidaactual = vida;
     }
 
     public void TakeDamage(int Damage)
     {
-        CurrentHealth -= Damage;
+        vidaactual -= Damage;
 
-        if(CurrentHealth <= 0)
+        if (vidaactual <= 0)
         {
             Dead();
-            over.show();
+            
         }
     }
     void Dead()
@@ -31,14 +30,11 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
-        BarraVida.value = CurrentHealth;
-        if (CurrentHealth <= 0)
+
+        if (vidaactual <= 0)
         {
             Debug.Log("murio saco provecho de mi y abuso");
-            Destroy(gameObject);
-            
-            
+
         }
     }
-
 }
