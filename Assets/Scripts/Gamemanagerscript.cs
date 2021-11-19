@@ -5,6 +5,10 @@ using UnityEngine;
 public class Gamemanagerscript : MonoBehaviour
 {
     public GameObject pausemenu;
+    void Start()
+    {
+        Time.timeScale = 1;
+    }
     public void pausebutton()
     {
         pausemenu.SetActive(true);
