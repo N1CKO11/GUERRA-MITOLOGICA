@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ControlManager : MonoBehaviour
 {
+    public int scene;
     [SerializeField] float ComboResetTime = 0.5f; //The Time to reset the Combo Time
     [SerializeField] List<KeyCode> KeysPressed; //List of all the Keys Pressed so far
 
@@ -17,14 +19,18 @@ public class ControlManager : MonoBehaviour
         if (movesManager == null)
             movesManager = FindObjectOfType<MovesManager>();
     }
-
+    
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SceneManager.LoadScene(scene);
+        }
         DetectPressedKey(); //Get the Pressed Key
 
         PrintControls(); //Just for testing
     }
-
+   
     public void DetectPressedKey()
     {
         //Go through all the Keys
@@ -43,7 +49,7 @@ public class ControlManager : MonoBehaviour
             }
         }
     }
-
+    
     public void ResetCombo() //Called to Reset the Combo after a move
     {
         KeysPressed.Clear();

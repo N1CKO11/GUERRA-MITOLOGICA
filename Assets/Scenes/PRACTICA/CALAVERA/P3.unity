@@ -1946,6 +1946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5302109c1fe6d0458f9b1c2740666bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: 0
   ComboResetTime: 0.5
   KeysPressed: 
   controlsTestText: {fileID: 1776329372}
@@ -2276,14 +2277,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'DEMO TERMINADO
+  m_Text: 'FIN DE LA PRACTICA
 
 
     para reiniciar presiona (r)
 
 
 
-    salir del juego alt+f4'
+'
 --- !u!222 &1654894143
 CanvasRenderer:
   m_ObjectHideFlags: 0

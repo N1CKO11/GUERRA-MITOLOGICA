@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 11
-  segundosEspera: 13
+  segundosEspera: 5
 --- !u!4 &2063748650
 Transform:
   m_ObjectHideFlags: 0

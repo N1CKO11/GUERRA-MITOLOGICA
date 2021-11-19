@@ -2337,14 +2337,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'DEMO TERMINADO
-
-
-    para reiniciar presiona (r)
-
-
-
-    salir del juego alt+f4'
+  m_Text: "\xA1LO DERROTASTE!\n\npara reiniciar presiona (r)\n\n\nsalir del juego
+    alt+f4"
 --- !u!222 &1654894143
 CanvasRenderer:
   m_ObjectHideFlags: 0
